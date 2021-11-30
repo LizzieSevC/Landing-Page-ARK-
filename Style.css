@@ -2,18 +2,23 @@
 @font-face {
     font-family: ARK;
     src: url('fonts/ARK-Regular.ttf');
+    font-family: longa iberica;
+    src: url('fonts/LongaIberica.ttf');
 }
 
 /* Header no rectangular*/
 p{
     font-family: ARK;
-    padding: 5vw;
 }
 
 h1{
     font-family: ARK;
 }
 
+html{
+    scroll-behavior: smooth;
+ }
+ 
 
 header{
     height: 35vw;
@@ -40,9 +45,9 @@ body {
 /* Menú*/
 
 #menucontainer{
-    display: flex;
-    flex-direction: column-reverse;
+float: right;
 }
+
 .nav{
     list-style-type: none;
 }
@@ -90,6 +95,7 @@ width: 100%;}
 
 .bodygrid1{
 display: grid;
+grid-template-columns: 50% 50%;
 grid-template-areas:
 'header header'
 'main right'
@@ -104,12 +110,16 @@ grid-template-areas:
 }
 
 .p1{
-    -webkit-text-stroke: 0.1vw green;
+    -webkit-text-stroke: 0.1vw rgba(0, 143, 0, 0.555);
     text-align: center;
-    padding: 1vw;
+    padding: 3vw;
+    font-weight: bolder;
 }
 
+/* video */
+
 .trailerC{
+    padding-left: 5vw;
     position: relative;
     overflow: hidden;
     width: 100%;
@@ -118,8 +128,8 @@ grid-template-areas:
 
 .trailer{
     position: relative;
+    align-items: center;
     top: 5vw;
-    left: 5vw;
     bottom: 0;
     right: 0;
     width: 95%;
@@ -158,8 +168,7 @@ grid-template-areas:
 'options options'
 'bottom bottom';
 background: rgb(255,255,255);
-background: linear-gradient(180deg, rgba(255,255,255,1) 2%, rgba(191,0,0,1) 30%, rgba(255,255,255,1) 50%);
-}
+background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,0,0,0.6952595936794582) 50%, rgba(255,255,255,1) 100%); }
     
 
 /* Carrusel eventos*/
@@ -206,7 +215,7 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 2%, rgba(191,0,0,1) 30%,
 /* Menú del carrusel eventos*/
 
 .menucar{
-    width: 70vw;
+    width: 80vw;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -251,8 +260,10 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 2%, rgba(191,0,0,1) 30%,
 }
 
 .p2{
-    -webkit-text-stroke: 0.1vw red;
+    -webkit-text-stroke: 0.1vw rgba(190, 0, 0, 0.568);
     text-align: center;
+    font-weight: bolder;
+    padding: 4vw;
 }
 
 .rborder{
@@ -284,20 +295,18 @@ background-size: cover;
 background-repeat: no-repeat;
 }
 
-
 /* Carrusel de imagenes DLC*/
 
 #carrusel2{
     margin: auto;
-    width: 100%;
-
+    width: 60vw;
     padding-bottom: 5vw;
+    padding-right: 15vw;
 }
 
 #carrusel2 > ul.slider2{
     list-style-type: none;
     padding-top: 2vw;
-    padding-left: 17vw;
     position: relative;
     width: 60vw;
     height: 16vw;
@@ -335,6 +344,7 @@ background-repeat: no-repeat;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    padding-top: 5vw;
 }
 
 #menu2{
@@ -375,8 +385,10 @@ background-repeat: no-repeat;
 }
 
 .p3{
-    -webkit-text-stroke: 0.1vw rgb(0, 183, 255);
+    -webkit-text-stroke: 0.1vw rgb(5, 183, 206);
     text-align: center;
+    font-weight: bolder;
+    padding: 3vw;
 }
 
 
@@ -388,47 +400,65 @@ background-repeat: no-repeat;
 /* Footer */
 
 .col1f{grid-area: FindUs;
-    width: 100%;}
-.col2f{grid-area: icons;
-    width: 100%;}
+    width: 20vw;}
+.col2f{grid-area: plataformas;
+    width: 30vw;}
 .col3f{grid-area: socialmedia;
-    width: 100%;}
+        width: 20vw;}
 .col4f{grid-area: compy;
-    width: 100%;}
+    width: 19vw;}
     
     
 .footergrid{
 display: grid;
 grid-template-areas:
-'FindUs icons social compy';
+'FindUs plataformas socialmedia compy';
 }
+
 
 footer{
     background: rgb(255,255,255);
 background: linear-gradient(180deg, rgba(255,255,255,1) 2%, rgba(43,183,249,1) 97%);
 }
 
-.platforms{
-    display: flex;
-    flex-direction: row;
-    width: 5vw;
-    height: 5vw;
-    border-style: none;
-    padding-bottom: 10vw;
-}
-.socialM{
-    display: flex;
-    flex-direction: row;
-    width: 5vw;
-    height: 5vw;
-    border-style: none;
-    padding-bottom: 0vw;
+.footp{
+    text-align: center;
+    font-weight: bold;
+    text-size-adjust: 4vw;
 }
 
+.footrow{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 3vw;
+    padding-right: 2vw;
+}
 
+.platforms {
+    width: 5vw;
+}
 
+.compy{
+    width: 15vw;
+    padding-top: 5vw;
+}
+  
+.creditgrid{
+display: flex;
+background-color: black;
+flex-wrap: nowrap;
+justify-content: center;
+align-items: center;
+}
 
-
-
-
-
+#trademark{
+ font-family: longa iberica;
+ color: white;
+ font-size: 3vw;
+ padding-left: 30vw;
+}
+#liz{
+    width: 8vw;
+}
